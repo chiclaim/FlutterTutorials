@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sample/multi-child/column_demo_page.dart';
+import 'package:flutter_sample/share-data/inherited_widget_demo.dart';
 import 'package:flutter_sample/single-child/align_demo_page.dart';
 import 'package:flutter_sample/single-child/aspect_demo_ratio.dart';
 import 'package:flutter_sample/single-child/baseline_demo_page.dart';
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
         ExpandedDemoPage.router: (context) => const ExpandedDemoPage(),
         TransformDemoPage.router: (context) => const TransformDemoPage(),
         ColumnDemoPage.router: (context) => const ColumnDemoPage(),
+        InheritedWidgetTestRoute.router: (context) => InheritedWidgetTestRoute(),
       },
     );
   }
@@ -53,6 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
     PageBean(text: "ExpandedDemoPage", router: ExpandedDemoPage.router),
     PageBean(text: "TransformDemoPage", router: TransformDemoPage.router),
     PageBean(text: "ColumnDemoPage", router: ColumnDemoPage.router),
+    PageBean(text: "StatefulWidgetPage", router: InheritedWidgetTestRoute.router),
   ];
 
   @override
